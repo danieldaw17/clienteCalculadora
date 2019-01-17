@@ -90,7 +90,7 @@
 				<br/>
 				<br/>
 				Result <br/>
-				<input type="number" value="<?php if($result!=null) echo $result; ?>">
+				<input type="number" step='0.01' value="<?php if($result!=null) echo $result; ?>">
 			</form>
 		</main>
 	</body>
