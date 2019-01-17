@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <?php
 	$result=null;
@@ -38,28 +39,24 @@
 
 	function add($parameters) {
 		$client = new SoapClient("http://www.dneonline.com/calculator.asmx?wsdl");
-		//$parameters = array('intA'=>2, 'intB'=>2);
 		$result = $client->Add($parameters)->AddResult;
 		return $result;
 	}
 
 	function subtract($parameters) {
 		$client = new SoapClient("http://www.dneonline.com/calculator.asmx?wsdl");
-		//$parameters = array('intA'=>6, 'intB'=>1);
 		$result = $client->Subtract($parameters)->SubtractResult;
 		return $result;
 	}
 
 	function multiply($parameters) {
 		$client = new SoapClient("http://www.dneonline.com/calculator.asmx?wsdl");
-		$parameters = array('intA'=>6, 'intB'=>2);
 		$result = $client->Multiply($parameters)->MultiplyResult;
 		return $result;
 	}
 
 	function divide($parameters) {
 		$client = new SoapClient("http://www.dneonline.com/calculator.asmx?wsdl");
-		$parameters = array('intA'=>10, 'intB'=>2);
 		$result = $client->Divide($parameters)->DivideResult;
 		return $result;
 	}
