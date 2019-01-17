@@ -61,7 +61,7 @@
 		$client = new SoapClient("http://www.dneonline.com/calculator.asmx?wsdl");
 		$parameters = array('intA'=>10, 'intB'=>2);
 		$result = $client->Divide($parameters)->DivideResult;
-		echo $result;
+		return $result;
 	}
 
 
